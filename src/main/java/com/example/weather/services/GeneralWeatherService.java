@@ -64,8 +64,7 @@ public class GeneralWeatherService {
                 .localtimes(weatherApiObject.getLocation().getLocaltimes())
                 .pressure((openWeatherObject.getMain().getPressure() + weatherApiObject.getCurrent().getPressureMb()) /2)
                 .visibility(openWeatherObject.getVisibility())
-                .openWeatherObject(openWeatherObject)
-                .weatherApiObject(weatherApiObject).build();
+                .build();
     }
 }
 

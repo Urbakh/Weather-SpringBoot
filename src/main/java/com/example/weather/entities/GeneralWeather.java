@@ -41,9 +41,11 @@ public class GeneralWeather {
 
     private Integer visibility;
 
+    @JsonIgnore
     @OneToOne(cascade = CascadeType.ALL)
     private OpenWeatherObject openWeatherObject;
 
+    @JsonIgnore
     @OneToOne(cascade = CascadeType.ALL)
     private WeatherApiObject weatherApiObject;
 
@@ -61,8 +63,6 @@ public class GeneralWeather {
                 ", gustKph=" + gustKph +
                 ", description='" + description + '\'' +
                 ", visibility=" + visibility +
-                ", openWeatherObject=" + openWeatherObject +
-                ", weatherApiObject=" + weatherApiObject +
                 '}';
     }
 }
